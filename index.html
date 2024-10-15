@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Button</title>
     <style>
         body {
+            background-image: url(../weddind-akbar/img/A-Guide-To-Typical-Wedding-Day-Timelines-scaled.jpg);
+            background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -13,23 +16,40 @@
             margin: 0;
         }
         .button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            padding: 1rem 2rem; /* Moslashuvchan o'lchamlar */
+            background-color: rgba(255, 255, 255, 0.2);
+            color: black; /* Matn qora rangda */
+            border: 2px solid gold; /* Tugma qirralari oltin rangda */
+            border-radius: 8px;
+            font-size: 1.5rem;
             cursor: pointer;
             text-decoration: none;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
         .button:hover {
-            background-color: #45a049;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: gold; /* Hover qilinganida oltin rang o'zgarmasdan qoladi */
+        }
+
+        /* Kichik ekranlar uchun moslashtirish */
+        @media (max-width: 768px) {
+            .button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button {
+                padding: 0.6rem 1rem;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <a href="weddingphotographyandfilms.com/wedding-samples.html" class="button">To'y suratlari</a>
+    <a href="https://weddingphotographyandfilms.com/wedding-samples.html" class="button">To'y suratlari</a>
 
 </body>
 </html>
